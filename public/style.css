@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(46, 46, 46);
+}
+
+.topo {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    background-color: #333333;
+}
+
+.navbar {
+    background-color: #333333;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav {
+    color: aliceblue;
+}
+
+#chat-container {
+    display: flex;
+    height: 100vh;
+}
+
+#sidebar {
+    max-width: 20%;
+    height: -40px;
+    background-color: #ffffff1d;
+    color: aliceblue;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+#sidebar h2 {
+    margin-top: 30px;
+}
+
+#sidebar h3 {
+    color: beige;
+    cursor: pointer;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar li {
+    color: beige;
+    font-size: small;
+    margin-bottom: 5px;
+    border: 2px solid beige;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 10px;
+    /* background-color: #f0f0f0; */
+    cursor: pointer;
+}
+
+.menu li {
+    display: none;
+}
+
+.menu.open li {
+    display: block;
+}
+
+#chat-box {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#conversation {
+    color: aliceblue;
+}
+
+#input-box {
+    display: flex;
+    margin-top: 10px;
+    width: 100%;
+    resize: vertical;
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 10px;
+    margin-right: 2px;
+    height: 15px;
+}
+
+#send-button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: aliceblue;
+    border: none;
+    border-radius: 5px;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.chat-balloon {
+    border-radius: 8px;
+    padding: 10px;
+    position: relative;
+    margin: 0 0 10px 0;
+}
+
+.chat-balloon.right {
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+.chat-balloon.left {
+    background-color: #e1e1e1;
+    color: #333333;
+    align-self: flex-start;
+}
+
+.styled-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.styled-input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.7);
+}
