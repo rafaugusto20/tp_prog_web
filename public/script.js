@@ -61,19 +61,39 @@ function sendMessage(message = null) {
   }
 }
 
-function sendToApi(text) {
-  // https://github.com/public-apis/public-apis#animals
-  fetch('https://jsonplaceholder.typicode.com/posts', {
-    method: 'POST',
-    body: JSON.stringify({ text }),
-    headers: {
-      'Content-type': 'application/json; charset=UTF-8',
-    },
-  })
+function contarPalavras(texto) {
+  
+  texto = texto.trim();
+  if (texto === "") 
+      return 0;
 
+  let palavras = texto.split(/\s+/);
+
+  return palavras.length;
+}
+
+function posicaoAleatoria(array) {
+  if (array.length === 0)
+      return null;
+  
+  let indiceAleatorio = Math.floor(Math.random() * array.length);
+  return array[indiceAleatorio];
+}
+
+function sendToApi(text) {
+  let quantidade = contarPalavras(text)
+
+  fetch('https://dog-api.kinduff.com/api/facts?number=' + quantidade)
     .then(response => response.json())
     .then(data => {
-      let apiResponse = data.title || 'API response';
+
+      let apiResponse;
+      if (data.success) {
+        apiResponse = posicaoAleatoria(data.facts)
+      } else {
+        apiResponse = "Não foi possivel recurar uma resposta do servidor"
+      }
+
       let apiMessage = document.createElement('div');
 
       apiMessage.className = 'chat-balloon left';
