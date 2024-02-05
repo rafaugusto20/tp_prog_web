@@ -1,133 +1,193 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ChatBot</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-</head>
+  </head>
 
-<body>
-
-    <header class="navbar">
-        <nav>
-            <ul>
-                <li><a href="#">Página Inicial</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+  <body>
+    <!-- <header class="navbar">
+      <nav>
+        <ul>
+          <li><a href="#">Página Inicial</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Serviços</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
+    </header> -->
 
     <div id="chat-container">
-        <div id="sidebar">
-            <h2>Sugestões</h2>
-            <h3 onclick="toggleOptions(this)">Processo de Admissão:</h3>
-            <ul class="menu" id="menu-list">
-                <li>Como posso me candidatar para ingressar na universidade?</li>
-                <li>Quais são os requisitos de admissão para o curso X?</li>
-                <li>Qual é o prazo de inscrição para o próximo semestre?</li>
-            </ul>
-            <h3 onclick="toggleOptions(this)">Informações Acadêmicas:</h3>
-            <ul class="menu" id="menu-list">
-                <li>Quais são os cursos oferecidos pela universidade?</li>
-                <li>Como posso obter informações sobre os programas de graduação e pós-graduação?</li>
-                <li>Onde posso encontrar informações sobre os currículos dos cursos?</li>
-            </ul>
-            <h3 onclick="toggleOptions(this)">Assuntos Financeiros:</h3>
-            <ul class="menu" id="menu-list">
-                <li>Quais são as opções de bolsas de estudo disponíveis?</li>
-                <li>Como posso pagar minha mensalidade?</li>
-                <li>Existe algum programa de auxílio financeiro para estudantes?</li>
-            </ul>
-            <h3 onclick="toggleOptions(this)">Apoio Estudantil:</h3>
-            <ul class="menu" id="menu-list">
-                <li>Que tipo de serviços de apoio estudantil a universidade oferece?</li>
-                <li>Como posso acessar recursos acadêmicos, como bibliotecas e laboratórios?</li>
-                <li>Quem devo contatar em caso de dificuldades acadêmicas?</li>
-            </ul>
-            <h3 onclick="toggleOptions(this)">Eventos e Atividades:</h3>
-            <ul class="menu" id="menu-list">
-                <li>Quais são os eventos ou atividades planejados pela universidade?</li>
-                <li>Como posso participar de clubes ou organizações estudantis?</li>
-                <li>Existe alguma feira de carreiras ou evento de networking?</li>
-            </ul>
-            <h3 onclick="toggleOptions(this)">Informações sobre Professores e Palestrantes:</h3>
-            <ul class="menu" id="menu-list">
-                <li>Como posso encontrar informações sobre os professores do curso X?</li>
-                <li>Há palestras ou eventos especiais programados para este semestre?</li>
-                <li>Como faço para marcar uma reunião com um professor específico?</li>
-            </ul>
-            <h3 onclick="toggleOptions(this)">Infraestrutura e Alojamento:</h3>
-            <ul class="menu" id="menu-list">
-                <li>Quais são as opções de alojamento disponíveis para estudantes?</li>
-                <li>Como posso obter informações sobre as instalações esportivas e recreativas?</li>
-                <li>Existe suporte para estudantes com necessidades especiais?</li>
-            </ul>
-            <h3 onclick="toggleOptions(this)">Informações sobre Estágios e Oportunidades Profissionais:</h3>
-            <ul class="menu" id="menu-list">
-                <li>Como a universidade auxilia os estudantes na busca por estágios?</li>
-                <li>Quais são as parcerias da universidade com empresas para oportunidades profissionais?</li>
-                <li>Onde posso encontrar informações sobre programas de estágio e emprego após a graduação?</li>
-            </ul>
-            <h3 onclick="toggleOptions(this)">Atendimento ao Cliente e Suporte Técnico:</h3>
-            <ul class="menu" id="menu-list">
-                <li>Como posso obter ajuda técnica para questões relacionadas ao sistema online da universidade?</li>
-                <li>Quem devo contatar se tiver problemas com minha conta de estudante?</li>
-                <li>Há um suporte técnico disponível fora do horário comercial?</li>
-            </ul>
-            <h3 onclick="toggleOptions(this)">Atualizações e Comunicações:</h3>
-            <ul class="menu" id="menu-list">
-                <li>Como posso me inscrever para receber atualizações e notícias da universidade?</li>
-                <li>Onde posso encontrar o calendário acadêmico para o próximo semestre?</li>
-                <li>Há alguma mudança importante no campus que eu deveria saber?</li>
-            </ul>
+      <div id="sidebar">
+        <h2>Sugestões</h2>
+        <h3 onclick="toggleOptions(this)">Processo de Admissão:</h3>
+        <ul class="menu" id="menu-list">
+          <li>Como posso me candidatar para ingressar na universidade?</li>
+          <li>Quais são os requisitos de admissão para o curso X?</li>
+          <li>Qual é o prazo de inscrição para o próximo semestre?</li>
+        </ul>
+        <h3 onclick="toggleOptions(this)">Informações Acadêmicas:</h3>
+        <ul class="menu" id="menu-list">
+          <li>Quais são os cursos oferecidos pela universidade?</li>
+          <li>
+            Como posso obter informações sobre os programas de graduação e
+            pós-graduação?
+          </li>
+          <li>
+            Onde posso encontrar informações sobre os currículos dos cursos?
+          </li>
+        </ul>
+        <h3 onclick="toggleOptions(this)">Assuntos Financeiros:</h3>
+        <ul class="menu" id="menu-list">
+          <li>Quais são as opções de bolsas de estudo disponíveis?</li>
+          <li>Como posso pagar minha mensalidade?</li>
+          <li>Existe algum programa de auxílio financeiro para estudantes?</li>
+        </ul>
+        <h3 onclick="toggleOptions(this)">Apoio Estudantil:</h3>
+        <ul class="menu" id="menu-list">
+          <li>
+            Que tipo de serviços de apoio estudantil a universidade oferece?
+          </li>
+          <li>
+            Como posso acessar recursos acadêmicos, como bibliotecas e
+            laboratórios?
+          </li>
+          <li>Quem devo contatar em caso de dificuldades acadêmicas?</li>
+        </ul>
+        <h3 onclick="toggleOptions(this)">Eventos e Atividades:</h3>
+        <ul class="menu" id="menu-list">
+          <li>
+            Quais são os eventos ou atividades planejados pela universidade?
+          </li>
+          <li>Como posso participar de clubes ou organizações estudantis?</li>
+          <li>Existe alguma feira de carreiras ou evento de networking?</li>
+        </ul>
+        <h3 onclick="toggleOptions(this)">
+          Informações sobre Professores e Palestrantes:
+        </h3>
+        <ul class="menu" id="menu-list">
+          <li>
+            Como posso encontrar informações sobre os professores do curso X?
+          </li>
+          <li>
+            Há palestras ou eventos especiais programados para este semestre?
+          </li>
+          <li>
+            Como faço para marcar uma reunião com um professor específico?
+          </li>
+        </ul>
+        <h3 onclick="toggleOptions(this)">Infraestrutura e Alojamento:</h3>
+        <ul class="menu" id="menu-list">
+          <li>
+            Quais são as opções de alojamento disponíveis para estudantes?
+          </li>
+          <li>
+            Como posso obter informações sobre as instalações esportivas e
+            recreativas?
+          </li>
+          <li>Existe suporte para estudantes com necessidades especiais?</li>
+        </ul>
+        <h3 onclick="toggleOptions(this)">
+          Informações sobre Estágios e Oportunidades Profissionais:
+        </h3>
+        <ul class="menu" id="menu-list">
+          <li>
+            Como a universidade auxilia os estudantes na busca por estágios?
+          </li>
+          <li>
+            Quais são as parcerias da universidade com empresas para
+            oportunidades profissionais?
+          </li>
+          <li>
+            Onde posso encontrar informações sobre programas de estágio e
+            emprego após a graduação?
+          </li>
+        </ul>
+        <h3 onclick="toggleOptions(this)">
+          Atendimento ao Cliente e Suporte Técnico:
+        </h3>
+        <ul class="menu" id="menu-list">
+          <li>
+            Como posso obter ajuda técnica para questões relacionadas ao sistema
+            online da universidade?
+          </li>
+          <li>
+            Quem devo contatar se tiver problemas com minha conta de estudante?
+          </li>
+          <li>Há um suporte técnico disponível fora do horário comercial?</li>
+        </ul>
+        <h3 onclick="toggleOptions(this)">Atualizações e Comunicações:</h3>
+        <ul class="menu" id="menu-list">
+          <li>
+            Como posso me inscrever para receber atualizações e notícias da
+            universidade?
+          </li>
+          <li>
+            Onde posso encontrar o calendário acadêmico para o próximo semestre?
+          </li>
+          <li>Há alguma mudança importante no campus que eu deveria saber?</li>
+        </ul>
+      </div>
+
+      <div id="chat-box">
+        <div class="chat-title">
+          <div class="container-avatar">
+            <figure class="avatar">
+              <img
+                src="https://w7.pngwing.com/pngs/503/611/png-transparent-chatbot-internet-bot-kik-messenger-facebook-messenger-telegram-ama-shopping-center-thumbnail.png"
+              />
+            </figure>
+            <div>
+              <h1>UFOP</h1>
+              <h2>Informacoes</h2>
+            </div>
+          </div>
         </div>
 
-        <div id="chat-box">
+        <div class="chat-box-intern">
+          <div id="input-box">
+            <textarea
+              id="user-input"
+              placeholder="Digite sua mensagem..."
+              class="styled-input"
+            ></textarea>
+            <button id="send-button" onclick="sendMessage()">Enviar</button>
+          </div>
 
-            <div id="input-box">
-                <textarea id="user-input" placeholder="Digite sua mensagem..." class="styled-input"></textarea>
-                <button id="send-button"  onclick="sendMessage()">Enviar</button>
-            </div>
-
-            <div class="chat-container" id="chat-area">
-                <!-- <div class="chat-balloon right">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                        and more recently with desktop publishing software like Aldus PageMaker including versions of
-                        Lorem Ipsum.</p>
-                </div>
-                <div class="chat-balloon left">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                        and more recently with desktop publishing software like Aldus PageMaker including versions of
-                        Lorem Ipsum.</p>
-                </div>
-                <div class="chat-balloon right">
-                    <p>Olá! Este é um exemplo de balão de chat à direita.</p>
-                </div>
-                <div class="chat-balloon left">
-                    <p>Olá! Este é um exemplo de balão de chat à esquerda.</p>
-                </div>
-                <div class="chat-balloon right">
-                    <p>Olá! Este é um exemplo de balão de chat à direita.</p>
-                </div> -->
-
-            </div>
-
+          <div class="chat-container" id="chat-area">
+            <!-- <div class="chat-balloon right">
+                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                              the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                              of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                              but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                              popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                              and more recently with desktop publishing software like Aldus PageMaker including versions of
+                              Lorem Ipsum.</p>
+                      </div>
+                      <div class="chat-balloon left">
+                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                              the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                              of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                              but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                              popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                              and more recently with desktop publishing software like Aldus PageMaker including versions of
+                              Lorem Ipsum.</p>
+                      </div>
+                      <div class="chat-balloon right">
+                          <p>Olá! Este é um exemplo de balão de chat à direita.</p>
+                      </div>
+                      <div class="chat-balloon left">
+                          <p>Olá! Este é um exemplo de balão de chat à esquerda.</p>
+                      </div>
+                      <div class="chat-balloon right">
+                          <p>Olá! Este é um exemplo de balão de chat à direita.</p>
+                      </div> -->
+          </div>
         </div>
+      </div>
     </div>
-
-</body>
-
+  </body>
 </html>
